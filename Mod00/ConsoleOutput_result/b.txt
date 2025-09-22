@@ -1,0 +1,3 @@
+[mode] --newline (без flush)
+this is 
+AAAA!!!

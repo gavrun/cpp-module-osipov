@@ -1,0 +1,34 @@
+#pragma once
+
+#include "human.h"
+#include <vector>
+#include <numeric>
+#include <iomanip>
+
+class student 
+    : public human {
+public:
+    student(std::string last_name, std::string name, std::string second_name, std::vector<int> scores)
+        : human(std::move(last_name), std::move(name), std::move(second_name)), scores_(std::move(scores)) {
+    }
+
+    float get_average_score() const {
+        const unsigned count = static_cast<unsigned>(scores_.size());
+        if (count == 0) return 0.0f;
+        unsigned sum = std::accumulate(scores_.begin(), scores_.end(), 0u);
+        return static_cast<float>(sum) / static_cast<float>(count);
+    }
+
+    // polymorphic part
+    const char* role() const override { return "student"; }
+
+    void print(std::ostream& os) const override {
+        os << get_full_name() << " | role: " << role()
+            << " | average score = " << std::fixed << std::setprecision(2)
+            << get_average_score();
+    }
+
+private:
+    std::vector<int> scores_;
+};
+

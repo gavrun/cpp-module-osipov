@@ -283,6 +283,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "153_StudentGrade", "Lab15\1
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "154_FindMaxEven", "Lab15\154_FindMaxEven\154_FindMaxEven.vcxproj", "{2077E678-74B1-4247-A82C-4A493D084500}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{A535552F-03C3-49E1-B760-60592C3D9D99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test2", "Test2", "{A6089BEF-E8E2-4E7B-8815-19DF52E793DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
